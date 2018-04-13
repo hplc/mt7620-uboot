@@ -5,7 +5,7 @@ Boot log for release-20180412
 -------------
 
 ```
-U-Boot 1.1.3 (Apr 12 2018 - 03:39:24)
+U-Boot 1.1.3 (Apr 12 2018 - 21:17:47)
 
 Board: Ralink APSoC DRAM:  64 MB
 GPIO#44 updated GPIOMODE register: 001a311c -> 001ab11c
@@ -23,11 +23,11 @@ raspi_read: from:30000 len:1000
 U-Boot_mt7620 Version: 0.0.0.1
 --------------------------------------------
 ASIC 7620_MP (Port5<->None)
-DRAM component: 1024 Mbits DDR, width 16
+DRAM component: 512 Mbits DDR, width 16
 DRAM bus: 16 bit
-Total memory: 128 MBytes
+Total memory: 64 MBytes
 Flash component: SPI Flash
-Date:Apr 12 2018  Time:03:39:24
+Date:Apr 12 2018  Time:21:17:47
 ============================================
 icache: sets:512, ways:4, linesz:32 ,total:65536
 dcache: sets:256, ways:4, linesz:32 ,total:32768
@@ -57,7 +57,28 @@ Please choose the operation:
    7: Load Boot Loader code then write to Flash via Serial.
    8: System Load UBoot to SDRAM via TFTP.
    9: Load Boot Loader code then write to Flash via TFTP.
-================================================================              
+================================================================
+
+You choosed 4
+                                                                              0
+
+4: System Enter Boot Command Line Interface.
+
+U-Boot 1.1.3 (Apr 12 2018 - 21:17:47)
+MT7620 # printenv
+bootcmd=run usbargs;usb start;fatload usb 0 0x80c00000 uimage;bootm 0x80c00000
+usbargs=setenv bootargs root=8:2 rootdelay=5 rootfstype=ext4 rw eth=${ethaddr} console=ttyS0,${baudrate}
+bootdelay=2
+ipaddr=192.168.1.1
+serverip=192.168.1.100
+baudrate=115200
+stdin=serial
+stdout=serial
+stderr=serial
+ethaddr=00:02:2a:07:7c:42
+
+Environment size: 321/4092 bytes
+MT7620 #
 ```
 
 
