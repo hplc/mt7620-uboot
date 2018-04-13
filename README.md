@@ -95,6 +95,12 @@ $ file /opt/buildroot-gcc342/bin/mipsel-linux-uclibc-gcc
 
 Unpack the "toolchain/buildroot-gcc342" folder to "/opt/buildroot-gcc342", or wherever you want, but then you need to replace the paths below.
 
+Tested on Debian 9.3.0 i386 32-bit:
+```
+Operating System: Debian GNU/Linux 9 (stretch)
+Kernel: Linux 4.9.0-4-686
+Architecture: x86
+```
 
 Building
 --------
