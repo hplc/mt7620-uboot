@@ -105,7 +105,7 @@ Architecture: x86
 Building
 --------
 
-	$ git clone git@github.com:agustim/u-boot_wrtnode.git
+	$ git clone https://github.com/hplc/mt7620-uboot.git
 	$ export CONFIG_CROSS_COMPILER_PATH=/opt/buildroot-gcc342/bin  # necessary if not in /opt
 	$ export PATH=/opt/buildroot-gcc342/bin:$PATH
 	$ cp wrtnode_config .config
